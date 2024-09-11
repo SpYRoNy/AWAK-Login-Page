@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Illustration Image -->
+            <div class="illustration">
+                <img src="login-illustration.png" alt="Login Illustration">
+            </div>
+            <!-- Login Form Title -->
+            
+            <!-- Login Form -->
+            <form id="login-form">
+                <h2>User Login</h2>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username or Email" required>
+                    <span id="username-error" class="error"></span> <!-- Error message for username -->
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span id="password-error" class="error"></span> <!-- Error message for password -->
+                </div>
+                <button class="login-btn" type="submit">LOGIN</button>
+                <!-- Forgot Password Link -->
+                <div class="forgot">
+                    <a href="#">Forgot Username / Password?</a>
+                </div>
+                <!-- Create Account Link -->
+                <div class="create-account">
+                    <a href="#">Create Your Account →</a>
+                </div>
+                <p class="error" id="api-error" style="display:none;"></p>
+                <p class="success" id="api-success" style="display:none;"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+

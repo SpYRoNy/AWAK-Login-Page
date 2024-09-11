@@ -1,0 +1,217 @@
+/* Resetting margins, padding, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body style with a gradient background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ab61f9, #223fe0, #350d89, #32a1e6);
+    background-size: 400% 400%;
+    animation: gradient-bg 10s ease infinite;
+}
+
+/* Gradient background animation */
+@keyframes gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container to hold the login box */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%; /* Adjust width as needed */
+}
+
+/* Login box styling */
+.login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: center;
+    justify-content:space-around;
+}
+
+/* Style the illustration and form containers for horizontal display */
+.illustration, .login-form-container {
+    width: 60%; /* Divide the box into two equal parts */
+}
+
+.illustration {
+    padding-right: 20px; /* Add some spacing between image and form */
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+/* Title styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Input group styling for form fields */
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Styling for the login button */
+.login-btn {
+    background-color: #5e3def;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #3122a6;
+}
+
+/* Styling for the "Forgot" and "Create Account" links */
+.forgot, .create-account {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #999;
+}
+
+.forgot a, .create-account a {
+    color: #263271;
+    text-decoration: none;
+}
+
+.forgot a:hover, .create-account a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 12px;
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+}
+
+p > .error {
+    color: red;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+}
+
+.success {
+    background-color: lightgreen;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 20px 10px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+}
+
+
+@media (max-width: 1024px) {
+    /* Adjust width for smaller tablets */
+    .login-box {
+        width: 90%;
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+
+    .illustration, .login-form-container {
+        width: 100%;
+    }
+
+    .illustration {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust for smaller mobile devices */
+    .login-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .illustration img {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .forgot, .create-account {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust for small phones */
+    .login-box {
+        padding: 20px;
+        margin: 0px 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-group input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .login-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .illustration img {
+        max-width: 60%;
+    }
+}
